@@ -3,7 +3,7 @@
 
 <h5>Curso: Engenharia de Software<br>
 Disciplica: Estrutura de Dados<br>
-Professor: nome e link git do professor<br>
+Professor: <a href="https://github.com/marciogarridoLaCop">Marcio Garrido</a><br>
 Período: 3° Período<br>
 Aluno: Daniel Monteiro e Gabriel Martins </h5>
 
