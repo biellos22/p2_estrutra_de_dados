@@ -16,7 +16,7 @@ Aluno: Daniel Monteiro e Gabriel Martins </h5>
 <br>
 
 <h4 align="center">FLUXOGRAMA DO ESTUDO DE CASO - GERAL</h4>
-<p> Exemplo como deverá funcionar o sistema de forma geral desde a interação do mesmo com o usuário até a geração de relatorios mensais.</p>
+<p> Exemplo de como deverá funcionar o sistema de forma geral desde a interação do mesmo com o usuário até a geração de relatorios mensais.</p>
 <p align="center" width="100%">
     <img width="33%" src="img/Fuxograma_Completo.png"> 
 </p>
