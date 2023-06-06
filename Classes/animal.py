@@ -7,7 +7,7 @@ class Animal:
         self.encontrado_por = encontrado_por
         self.contato = contato
 
-    def __str__(self): # A função __str__ retorna uma representação em forma de string do objeto Animal.
+    def __str__(self): # __str__ retorna uma representação em forma de string do objeto Animal.
         return f"Espécie: {self.especie}\nIdade: {self.idade}\nPorte: {self.porte}\nPeculiaridade: {self.peculiaridade}\nEncontrado por: {self.encontrado_por}\nContato: {self.contato}"
 
 
