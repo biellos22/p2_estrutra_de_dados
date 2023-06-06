@@ -24,9 +24,9 @@ while True:
         print("Por favor, insira somente números até 3 dígitos para a idade.")
         continue
 
-    porte = input("Porte do animal (pequeno, médio ou grande): ")
-    if porte.lower() not in ["pequeno", "médio", "grande"]:
-        print("Por favor, insira um porte válido (pequeno, médio ou grande).")
+    porte = input("Porte do animal (p, m ou g): ")
+    if porte.lower() not in ["p", "m", "g"]:
+        print("Por favor, insira um porte válido (p, m ou g).")
         continue
 
     peculiaridade = input("Peculiaridade do animal (raça ou traços físicos): ")
