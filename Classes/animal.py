@@ -53,3 +53,37 @@ def listar_animais():
     for animal in animais:
         print(animal)
         print('-' * 50)
+
+def pesquisar_animais_por_caracteristicas():
+    while True:
+            especie = input("Espécie do animal: ")
+            if not especie.isalpha(): 
+                print("Por favor, insira somente letras para a espécie.")
+                continue
+            break
+    
+    while True:
+            porte = input("Porte do animal (p, m ou g): ")
+            if porte.lower() not in ["p", "m", "g"]:
+                print("Por favor, insira um porte válido (p, m ou g).")
+                continue
+            break
+    
+    peculiaridade = input("Peculiaridade do animal: ")
+    
+    print("Animais encontrados:")
+    encontrou_animal = False
+    contador_animais = 0
+    for animal in animais:
+        if animal.especie == especie and animal.porte == porte and animal.peculiaridade == peculiaridade:
+            encontrou_animal = True
+            contador_animais += 1
+            print(f"Espécie: {animal.especie}")
+            print(f"Porte: {animal.porte}")
+            print(f"Peculiaridade: {animal.peculiaridade}")
+            print("-" * 50)
+    if encontrou_animal:
+        print(f"Total de animais encontrados: {contador_animais}")
+    else:
+        print("Nenhum animal encontrado.")
+
