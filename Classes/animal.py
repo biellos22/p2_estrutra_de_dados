@@ -14,20 +14,27 @@ class Animal:
 animais = []
 
 while True:
-    especie = input("Espécie do animal: ")
-    if not especie.isalpha(): # isalpha() verifica-se se a entrada contém somente letras
-        print("Por favor, insira somente letras para a espécie.")
-        continue
 
-    idade = input("Idade do animal: ")
-    if not idade.isdigit() or len(idade) > 3: # isdigit() verifica se a entrada contém somente dígitos.
-        print("Por favor, insira somente números até 3 dígitos para a idade.")
-        continue
+    while True:
+        especie = input("Espécie do animal: ")
+        if not especie.isalpha(): # isalpha() verifica-se se a entrada contém somente letras
+            print("Por favor, insira somente letras para a espécie.")
+            continue
+        break
 
-    porte = input("Porte do animal (p, m ou g): ")
-    if porte.lower() not in ["p", "m", "g"]:
-        print("Por favor, insira um porte válido (p, m ou g).")
-        continue
+    while True:
+        idade = input("Idade do animal: ")
+        if not idade.isdigit() or len(idade) > 3: 
+            print("Por favor, insira somente números até 3 dígitos para a idade.")
+            continue
+        break
+
+    while True:
+        porte = input("Porte do animal (p, m ou g): ")
+        if porte.lower() not in ["p", "m", "g"]:
+            print("Por favor, insira um porte válido (p, m ou g).")
+            continue
+        break
 
     peculiaridade = input("Peculiaridade do animal (raça ou traços físicos): ")
 
@@ -43,5 +50,5 @@ while True:
         break
 
 # Teste para verificar funcionalidade da classe:
-#for animal in animais:
-#    print(animal)
+for animal in animais:
+    print(animal)
