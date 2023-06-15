@@ -18,18 +18,18 @@ Aluno: Daniel Monteiro e Gabriel Martins </h5>
 <h4 align="center">FLUXOGRAMA DO ESTUDO DE CASO - GERAL</h4>
 <p> Exemplo de como deverá funcionar o sistema de forma geral desde a interação do mesmo com o usuário até a geração de relatorios mensais.</p>
 <p align="center" width="100%">
-    <img width="33%" src="img/Fuxograma_Completo.png"> 
+    <img width="33%" src="img/Fluxograma Geral att.jpg"> 
 </p>
 <br>
 <h4 align="center">FLUXOGRAMA DO ESTUDO DE CASO - ANIMAL</h4>
 <p> É mostrado detalhadamente a forma que se propõe funcionar o cadastramento de animais no sistema, desde a inserção do mesmo até o armazenamento dos animais.</p>
 <p align="center" width="100%">
-    <img width="33%" src="img/Fluxograma_Animal.png"> 
+    <img width="33%" src="img/Fluxograma Animal att.jpg"> 
 </p>
 
 <h4 align="center">FLUXOGRAMA DO ESTUDO DE CASO - ADOTANTE</h4>
 <p> É mostrado detalhadamente a forma que se propõe funcionar o cadastramento de adotantes no sistema, desde o cadastro do mesmo até o armazenamento dos dados. </p>
 <p align="center" width="100%">
-    <img width="33%" src="img/Fuxograma_Adotante.png"> 
+    <img width="33%" src="img/Fluxograma Adotante att.jpg"> 
 </p>
 
