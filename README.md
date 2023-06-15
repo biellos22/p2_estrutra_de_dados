@@ -20,16 +20,27 @@ Aluno: Daniel Monteiro e Gabriel Martins </h5>
 <p align="center" width="100%">
     <img width="33%" src="img/Fluxograma Geral att.jpg"> 
 </p>
+<p align="center"> Parte do código referente ao Fuxograma geral</p>
+<p align="center" width="100%">
+    <img width="33%" src="img/Main.jpg"> 
+</p>
 <br>
 <h4 align="center">FLUXOGRAMA DO ESTUDO DE CASO - ANIMAL</h4>
 <p> É mostrado detalhadamente a forma que se propõe funcionar o cadastramento de animais no sistema, desde a inserção do mesmo até o armazenamento dos animais.</p>
 <p align="center" width="100%">
     <img width="33%" src="img/Fluxograma Animal att.jpg"> 
 </p>
-
+<p align="center"> Parte do código referente ao Fuxograma Animal</p>
+<p align="center" width="100%">
+    <img width="33%" src="img/Animal.jpg"> 
+</p>
+<br>
 <h4 align="center">FLUXOGRAMA DO ESTUDO DE CASO - ADOTANTE</h4>
 <p> É mostrado detalhadamente a forma que se propõe funcionar o cadastramento de adotantes no sistema, desde o cadastro do mesmo até o armazenamento dos dados. </p>
 <p align="center" width="100%">
     <img width="33%" src="img/Fluxograma Adotante att.jpg"> 
 </p>
-
+<p align="center"> Parte do código referente ao Fuxograma Adotante</p>
+<p align="center" width="100%">
+    <img width="33%" src="img/Adotantes.png"> 
+</p>
