@@ -15,17 +15,20 @@ def gerar_relatorio():
         encontrou_animal = False
         for animal in animais:
             if (animal.especie == adotante.especie_interessada
+                and animal.tipo_do_animal == adotante.tipo_animal
                 and animal.porte == adotante.porte
                 and animal.peculiaridade == adotante.preferencia_animal):
                 encontrou_adotante = True
                 encontrou_animal = True
                 print(f"Adotante: {adotante.nome}")
                 print(f'Espécie interessada: {adotante.especie_interessada}')
+                print(f'Tipo do aminal: {adotante.tipo_animal}')
                 print(f'Porte: {adotante.porte}')
                 print(f'Preferencia do animal: {adotante.preferencia_animal}')
                 print(' ')
                 print("Animais disponíveis:")
                 print("Espécie:", animal.especie)
+                print("Tipo do animal:", animal.tipo_do_animal)
                 print("Idade:", animal.idade)
                 print("Porte:", animal.porte)
                 print("Peculiaridade:", animal.peculiaridade)

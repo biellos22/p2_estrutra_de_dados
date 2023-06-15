@@ -2,8 +2,9 @@ import re
 
 
 class Animal:
-    def __init__(self, especie, idade, porte, peculiaridade, encontrado_por, contato):
+    def __init__(self, especie, tipo_do_animal, idade, porte, peculiaridade, encontrado_por, contato):
         self.especie = especie
+        self.tipo_do_animal = tipo_do_animal
         self.idade = idade
         self.porte = porte
         self.peculiaridade = peculiaridade
@@ -11,17 +12,10 @@ class Animal:
         self.contato = contato
 
     def __str__(self):
-        return f'Espécie: {self.especie}\n Idade: {self.idade}\n Porte: {self.porte}\n Peculiaridade: {self.peculiaridade}\n Encontrado por: {self.encontrado_por}\n Contato: {self.contato}'
+        return f'Espécie: {self.especie}\nTipo do animal: {self.tipo_do_animal}\n Idade: {self.idade}\n Porte: {self.porte}\n Peculiaridade: {self.peculiaridade}\n Encontrado por: {self.encontrado_por}\n Contato: {self.contato}'
 
 
-animais = [
-    Animal("canino", "1", "p", "preto", "marcos", "21913967089"),
-    Animal("canino", "2", "g", "branco", "gabriel", "21961988066"),
-    Animal("canino", "14", "m", "branco", "vanessa", "21950286404"),
-    Animal("felino", "23", "m", "sem pelos", "patricia", "21953779544"),
-    Animal("felino", "3", "p", "olhos verde", "jasmine", "21921293992"),
-    Animal("felino", "4", "m", "amarelo", "francisco", "21915266830"),
-]
+animais = []
 
 
 def valida_especie(especie):
@@ -79,6 +73,8 @@ def cadastrar_animal():
                 "Por favor, insira uma espécie válida.")
             especie = input("Espécie do animal: ")
 
+        tipo_do_animal = input("Escolha o tipo do animal: ").lower()
+
         idade = input("Idade do animal: ")
         while not valida_idade(idade):
             print("Por favor, insira uma idade válida.")
@@ -101,7 +97,7 @@ def cadastrar_animal():
             print("Por favor, insira telefone ou e-mail.")
             contato = input("Contato da pessoa que entregou o animal: ")
 
-        animal = Animal(especie, idade, porte, peculiaridade, encontrado_por, contato)
+        animal = Animal(especie, tipo_do_animal, idade, porte, peculiaridade, encontrado_por, contato)
         animais.append(animal)
 
         continuar = input("Deseja adicionar outro animal? (s/n): ")
@@ -127,7 +123,7 @@ def pesquisar_animais_por_caracteristicas():
         print(
             "Por favor, insira uma espécie válida.")
         especie = input("Espécie do animal: ")
-
+    
     porte = input("Porte do animal (p, m ou g): ")
     while porte.lower() not in ["p", "m", "g"]:
         print("Por favor, insira um porte válido.")

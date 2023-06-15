@@ -1,20 +1,30 @@
 import re
 
 class Adotante:
-    def __init__(self, nome, cpf, telefone, especie_interessada, porte, preferencia_animal):
+    def __init__(self, nome, cpf, telefone, especie_interessada, tipo_animal, porte, preferencia_animal):
         self.nome = nome
         self.cpf = cpf
         self.telefone = telefone
         self.especie_interessada = especie_interessada
+        self.tipo_animal = tipo_animal
         self.porte = porte
         self.preferencia_animal = preferencia_animal
 
     def __str__(self): # __str__ retorna uma representação em forma de string do objeto Adotante.
-        return f'Nome: {self.nome}\nCPF: {self.cpf}\nTelefone: {self.telefone}\nEspécie de animal interessada: {self.especie_interessada}\n Porte do animal: {self.porte}\nPreferência de animal: {self.preferencia_animal}'
+        return f'Nome: {self.nome}\nCPF: {self.cpf}\nTelefone: {self.telefone}\nEspécie de animal interessada: {self.especie_interessada}\nTipo do animal: {self.tipo_animal}\nPorte: {self.porte}\nPreferência de animal: {self.preferencia_animal}'
+
 
 
 # Teste para verificar funcionalidade da classe:
 adotantes = []
+
+ibama_permitido = {
+    'peixe': ['guppy', 'betta', 'molly', 'espada', 'acara disco', 'tetra neon', 'corydoras', 'peixe arco iris', 'peixe gato de vidro', 'peixe anjo'],
+    'anfibio': ['ra', 'sapo', 'perereca'],
+    'repteis': ['jabuti', 'iguana verde', 'teiu', 'calango', 'tartaruga', 'lagartixa', 'cobra do milho'],
+    'ave': ['peru', 'galinha', 'calopsita', 'periquito', 'canario', 'caturrita', 'diamante', 'mandarim', 'avestruz'],
+    'mamifero': ['cachorro', 'gato', 'rato', 'porco', 'ovelha', 'jumento', 'lhama', 'hamster', 'vaca', 'coelho']
+}
 
 def cadastrar_adotante():
     while True:
@@ -59,7 +69,19 @@ def cadastrar_adotante():
                 continue
             break
 
-        especie_interessada = input('Espécie de animal interessada: ')
+        while True:
+            especie_interessada= input('Escolha a espécie (peixe, anfibio, reptil, ave ou mamifero): ').lower()
+            tipo_animal = input('Escolha o tipo do animal: ').lower()
+
+            if especie_interessada in ibama_permitido:
+                especie_interessada = especie_interessada
+                if tipo_animal in ibama_permitido[especie_interessada]:
+                    print('Aprovado! O animal pode ser adotado.')
+                    break
+                else:
+                    print('O tipo de animal escolhido não é válido para a espécie selecionada.')
+            else:
+                print('A espécie selecionada não é válida.')
 
         while True:
             porte = input('Porte do animal (p, m ou g): ')
@@ -70,7 +92,7 @@ def cadastrar_adotante():
 
         preferencia_animal = input('Preferência: ')
 
-        adotante = Adotante(nome, cpf, telefone, especie_interessada, porte, preferencia_animal)
+        adotante = Adotante(nome, cpf, telefone, especie_interessada, tipo_animal, porte, preferencia_animal)
         adotantes.append(adotante)
 
         continuar = input('Deseja adicionar outro adotante? (s/n): ')
