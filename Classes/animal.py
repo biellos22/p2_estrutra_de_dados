@@ -17,21 +17,13 @@ class Animal:
 
 animais = []
 
-
-def valida_especie(especie):
-    if len(especie) < 3:
-        return False
-
-    vogais = set('aeiou')
-    if not any(char in vogais for char in especie):
-        return False
-
-    for char in especie:
-        if especie.count(char) > 2:
-            return False
-
-    return True
-
+ibama_permitido2 = {
+    'peixe': ['guppy', 'betta', 'molly', 'espada', 'acara disco', 'tetra neon', 'corydoras', 'peixe arco iris', 'peixe gato de vidro', 'peixe anjo'],
+    'anfibio': ['ra', 'sapo', 'perereca'],
+    'repteis': ['jabuti', 'iguana verde', 'teiu', 'calango', 'tartaruga', 'lagartixa', 'cobra do milho'],
+    'ave': ['peru', 'galinha', 'calopsita', 'periquito', 'canario', 'caturrita', 'diamante', 'mandarim', 'avestruz'],
+    'mamifero': ['cachorro', 'gato', 'rato', 'porco', 'ovelha', 'jumento', 'lhama', 'hamster', 'vaca', 'coelho']
+}
 
 def valida_idade(idade):
     if not idade.isdigit():
@@ -67,13 +59,19 @@ def valida_contato(contato):
 
 def cadastrar_animal():
     while True:
-        especie = input("Espécie do animal: ")
-        while not valida_especie(especie):
-            print(
-                "Por favor, insira uma espécie válida.")
-            especie = input("Espécie do animal: ")
+        while True:
+            especie= input('Escolha a espécie (peixe, anfibio, reptil, ave ou mamifero): ').lower()
+            tipo_do_animal = input('Escolha o tipo do animal: ').lower()
 
-        tipo_do_animal = input("Escolha o tipo do animal: ").lower()
+            if especie in ibama_permitido2:
+                especie = especie
+                if tipo_do_animal in ibama_permitido2[especie]:
+                    print('Aprovado! O animal pode ser adotado.')
+                    break
+                else:
+                    print('O tipo de animal escolhido não é válido para a espécie selecionada.')
+            else:
+                print('A espécie selecionada não é válida.')
 
         idade = input("Idade do animal: ")
         while not valida_idade(idade):
@@ -119,10 +117,6 @@ def pesquisar_animais_por_caracteristicas():
     animais.sort(key=lambda x: (x.especie, x.porte, x.peculiaridade))
 
     especie = input("Espécie do animal: ")
-    while not valida_especie(especie):
-        print(
-            "Por favor, insira uma espécie válida.")
-        especie = input("Espécie do animal: ")
     
     porte = input("Porte do animal (p, m ou g): ")
     while porte.lower() not in ["p", "m", "g"]:
