@@ -44,3 +44,14 @@ Aluno: Daniel Monteiro e Gabriel Martins </h5>
 <p align="center" width="100%">
     <img width="33%" src="img/Adotantes.png"> 
 </p>
+<br>
+<br>
+<h4 align="center">APLICATIVO EM FUNCIONAMENTO</h4>
+<p> É mostrado detalhadamente a forma que se propõe funcionar o cadastramento de adotantes no sistema, desde o cadastro do mesmo até o armazenamento dos dados. </p>
+<p align="center" width="100%">
+   <img width="33%" src="img/Menu1.jpg">
+   <img width="42%" src="img/menu2.jpg">
+   <img width="35%" src="img/menu3.jpg">
+   <img width="37%" src="img/menu4.jpg">
+   <img width="42%" src="img/menu5.jpg">
+</p>
