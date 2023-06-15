@@ -33,6 +33,7 @@ def gerar_relatorio():
                 print("Contato:", animal.contato)
                 print("-" * 50)
                 break  
+
         if not encontrou_animal:
             print(f"Nenhum animal disponível para o adotante {adotante.nome}.")
             print("-" * 50)
@@ -42,14 +43,15 @@ def gerar_relatorio():
 
 
 def menu():
-    print("\n===== MENU =====")
-    print("1. Cadastrar animal")
-    print("2. Cadastrar adotante")
-    print("3. Listar adotantes")
-    print("4. Listar animais")
-    print("5. Gerar relatório de cruzamento")
-    print("6. Pesquisar animais por características")
-    print("7. Sair")
+    print("\n~ Seja bem-vindo ao Santuário Guarani ~")
+    print("      ===== MENU =====")
+    print("      1. Cadastrar animal")
+    print("      2. Cadastrar adotante")
+    print("      3. Listar adotantes")
+    print("      4. Listar animais")
+    print("      5. Gerar relatório de cruzamento")
+    print("      6. Pesquisar animais por características")
+    print("      7. Sair")
     print("-" * 50)
 
     opcao = input("Escolha uma opção: ")

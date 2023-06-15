@@ -1,15 +1,16 @@
 import re
 
 class Adotante:
-    def __init__(self, nome, cpf, telefone, especie_interessada, preferencia_animal):
+    def __init__(self, nome, cpf, telefone, especie_interessada, porte, preferencia_animal):
         self.nome = nome
         self.cpf = cpf
         self.telefone = telefone
         self.especie_interessada = especie_interessada
+        self.porte = porte
         self.preferencia_animal = preferencia_animal
 
     def __str__(self): # __str__ retorna uma representação em forma de string do objeto Adotante.
-        return f'Nome: {self.nome}\nCPF: {self.cpf}\nTelefone: {self.telefone}\nEspécie de animal interessada: {self.especie_interessada}\nPreferência de animal: {self.preferencia_animal}'
+        return f'Nome: {self.nome}\nCPF: {self.cpf}\nTelefone: {self.telefone}\nEspécie de animal interessada: {self.especie_interessada}\n Porte do animal: {self.porte}\nPreferência de animal: {self.preferencia_animal}'
 
 
 # Teste para verificar funcionalidade da classe:
