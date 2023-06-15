@@ -13,8 +13,6 @@ class Adotante:
     def __str__(self): # __str__ retorna uma representação em forma de string do objeto Adotante.
         return f'Nome: {self.nome}\nCPF: {self.cpf}\nTelefone: {self.telefone}\nEspécie de animal interessada: {self.especie_interessada}\nTipo do animal: {self.tipo_animal}\nPorte: {self.porte}\nPreferência de animal: {self.preferencia_animal}'
 
-
-
 # Teste para verificar funcionalidade da classe:
 adotantes = []
 
@@ -103,4 +101,3 @@ def listar_adotantes():
     for adotante in adotantes:
         print(adotante)
         print('-' * 50)
-
